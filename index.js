@@ -5,6 +5,10 @@ const todayWeatherIcon = document.querySelector('.today-weather i');
 const todayTemp = document.querySelector('.weather-temp');
 const daysList = document.querySelector('.days-list');
 
+document.addEventListener('contextmenu', function(e) {
+  e.preventDefault();
+});
+
 // Mapping of weather condition codes to icon class names (Depending on Openweather Api Response)
 const weatherIconMap = {
     '01d': 'sun',
