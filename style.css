@@ -104,16 +104,19 @@ body{
     float: right;
 }
 
-.days-list{
+.days-list {
     display: flex;
+    justify-content: space-around; /* Distribui os itens uniformemente */
     list-style: none;
-    margin: 10px 35px;
+    margin: 10px 20px; /* Reduz a margem para ajustar melhor o espaçamento */
+    padding: 0;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
     border-radius: 10px;
 }
 
-.days-list li{
-    padding: 15px;
+.days-list li {
+    flex-basis: 20%; /* Garante que cada item ocupa 20% da largura do pai */
+    padding: 10px;
     cursor: pointer;
     display: flex;
     flex-direction: column;
@@ -121,7 +124,13 @@ body{
     align-items: center;
     border-radius: 10px;
     transition: all 0.3s ease;
+    margin: 0 5px; /* Mantém um espaçamento fixo entre os dias */
 }
+
+.days-list li:last-child {
+    margin-right: 0; /* Remove a margem direita para o último item */
+}
+
 
 .days-list li .bx{
     margin-bottom: 5px;
@@ -161,3 +170,59 @@ body{
 .loc-button:hover{
     background: #1a237e;
 }
+
+/* Ajustes para dispositivos móveis */
+@media (max-width: 768px) {
+    .container {
+        display: flex;
+        flex-direction: column; /* Empilha os elementos em coluna */
+        align-items: center; /* Centraliza os elementos dentro da coluna */
+        width: 90%;
+        height: auto;
+        padding: 20px;
+    }
+
+    .left-info {
+        width: 100%;
+        height: auto;
+        margin-bottom: 20px; /* Adiciona o espaço entre left-info e right-info */
+        background-size: cover;
+        position: relative;
+    }
+
+    .right-info {
+        width: 100%; /* Garante que ocupa toda a largura do ecrã */
+        padding: 20px;
+        box-sizing: border-box; /* Garante que o padding não "estoura" a largura */
+        text-align: center; /* Centraliza o conteúdo */
+        background-color: #232931; /* Mantém o fundo no right-info */
+        border-radius: 25px; /* Adiciona bordas arredondadas para consistência */
+    }
+
+    .day-info, .btn-container {
+        padding: 10px; /* Ajusta o espaçamento dentro do right-info */
+    }
+
+    .day-info div, .days-list li {
+        margin-bottom: 10px; /* Garante espaço entre os elementos da secção direita */
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 15px;
+    }
+
+    .left-info {
+        height: 300px;
+    }
+
+    .right-info {
+        padding: 15px;
+    }
+
+    .day-info div {
+        margin-bottom: 8px;
+    }
+}
+    
