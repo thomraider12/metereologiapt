@@ -226,3 +226,24 @@ body{
     }
 }
     
+
+.footer {
+    background-color: #1e293b; /* Cor de fundo escura, combinando com o layout */
+    color: #ffffff; /* Cor do texto */
+    text-align: center; /* Centraliza o texto */
+    padding: 10px 20px; /* Espaçamento interno */
+    border-radius: 15px; /* Torna os cantos arredondados */
+    margin: 10px auto; /* Adiciona espaçamento */
+    width: fit-content; /* Largura ajustada ao conteúdo */
+    font-size: 14px; /* Tamanho da fonte */
+    font-weight: bold; /* Negrito */
+}
+
+.footersa {
+    color: #fff;
+}
+
+.value {
+    font-size: smaller;
+    align-content: center;
+}
